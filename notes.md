@@ -22,3 +22,24 @@ Date: 23/05/2025
 
 ## What's Coming Tomorrow
 - Arrays — map, filter, reduce, spread operator
+
+# Day 2 — Arrays
+Date: 24/05/2025
+
+## What I Learned
+- Arrays are flexible in JS — no fixed size or type like Java
+- push/pop adds and removes from end, unshift/shift from beginning
+- map transforms every item and returns a new array
+- filter returns only items that match a condition
+- reduce combines all items into a single value
+- spread ... combines arrays without mutating originals
+- Array destructuring unpacks values into variables cleanly
+- useState in React is just array destructuring under the hood
+
+## What Was Confusing
+- single = is assignment, === is comparison inside filter
+- curly braces in arrow functions require explicit return keyword
+- acct.active not accounts.active inside callbacks
+
+## What's Coming Tomorrow
+- Objects & Object Destructuring
