@@ -43,3 +43,33 @@ Date: 24/05/2025
 
 ## What's Coming Tomorrow
 - Objects & Object Destructuring
+
+# Day 3 — Objects & Destructuring
+📅 Date: 25/05/2025
+
+## What I Learned
+- Objects are key-value pairs in JS — no class needed unlike Java
+- Dot notation is cleaner than bracket notation for accessing properties
+- Object destructuring unpacks values into variables in one line
+- Rename while destructuring using : e.g const { owner: accountName } = account
+- Default values in destructuring handle missing properties safely
+- this keyword refers to the object that owns the method
+- Never use arrow functions for object methods — this breaks
+- Spread ... merges objects and updates fields without mutating originals
+- Order matters with spread — spread first, override after
+- Property shorthand avoids repeating variable names as keys
+- Computed properties [] allow dynamic key names — used heavily in React forms
+
+## What Was Confusing
+- +- is not valid — use -= for subtraction assignment
+- Arrow functions break this inside object methods
+- Spread order matters — later keys override earlier ones
+- this inside methods should reference object properties not outer variables
+
+## Code I Wrote
+- bankAccount object with deposit, withdraw and getSummary methods
+- Merged and updated objects using spread without mutating originals
+- Dynamic form handler pattern using computed property names
+
+## What's Coming Tomorrow
+- Functions — arrow functions, callbacks, higher order functions
