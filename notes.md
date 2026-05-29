@@ -45,7 +45,7 @@ Date: 24/05/2025
 - Objects & Object Destructuring
 
 # Day 3 — Objects & Destructuring
-📅 Date: 25/05/2025
+ Date: 25/05/2025
 
 ## What I Learned
 - Objects are key-value pairs in JS — no class needed unlike Java
@@ -73,3 +73,33 @@ Date: 24/05/2025
 
 ## What's Coming Tomorrow
 - Functions — arrow functions, callbacks, higher order functions
+
+# Day 4 — Functions, Callbacks, Higher Order Functions & Closures
+Date: 26/05/2025
+
+## What I Learned
+- Arrow functions are the modern way to write functions in JS
+- Single line arrow functions return automatically — no return keyword needed
+- Curly braces in arrow functions require explicit return keyword
+- Default parameters handle missing arguments cleanly
+- A callback is a function passed into another function as argument
+- map, filter, forEach all take callbacks — I've been using them already
+- Higher order functions either take or return other functions
+- Closures remember variables from parent scope even after parent finishes
+- Private variables in JS are achieved through closures — like Java's private keyword
+- My useWebSocket hook was already using closures without knowing it!
+
+## What Was Confusing
+- const variables can't be reassigned — use let for values that change
+- Must return the methods object from a closure function
+- Call methods on the stored instance not on the function itself
+- else blocks need return keyword to output values
+
+## Code I Wrote
+- processTransaction with callbacks for deposit, withdrawal and insufficient funds
+- createMultiplier higher order function
+- Chain of filter + map + reduce on transactions array
+- createWallet closure with private balance and topUp, spend, getBalance methods
+
+## What's Coming Tomorrow
+- Async/Await, Promises & Fetch API
