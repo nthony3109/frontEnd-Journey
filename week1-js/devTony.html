@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 6 Practice</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        .notification {
+            background: #f0f9ff;
+            border-left: 4px solid #2196F3;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+        #counter {
+            text-align: center;
+            color: red;
+            height: fit-content;
+            width: fit-content;
+            display: inline-block;
+            border: black;
+            border-width: 2px ;
+            border-radius: 50%;
+            border: black;
+            padding: 4px;
+            margin: 4px;
+        }
+        #clear :hover{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            background-color: rgb(9, 9, 9);
+            border: black;
+            border-radius: 5px;
+            color: white;
+            padding: 4px;
+            
+        }
+         .notification:hover {
+            background-color: grey;
+            
+        }
+            
+    </style>
+</head>
+<body>
+    <h1 id="title">Notification App</h1>
+    <span id="counter"></span>
+     <input id="msgInput" type="text" placeholder="Enter message" />
+    <button id="addBtn">Add Notification</button>
+    <button id="clear" class="clear" >clear List</button>
+        
+    <div id="container"></div>
+
+
+    <script>
+        const title = document.querySelector("#title")
+        const input = document.querySelector("#msgInput")
+        const button = document.querySelector("#addBtn")
+        const container = document.querySelector("#container")
+        const span = document.querySelector("#counter")
+        const clear = document.querySelector("#clear")
+
+        // Change title color
+        title.style.color = "#1e1e2e"
+        
+        //setting counter
+        let count =0
+        // Click button to add notification
+        button.addEventListener("click", () => {
+            const message = input.value.trim()
+
+            if (!message) {
+                alert("Please enter a message!")
+                return
+            }
+
+            // Create new notification element
+            const div = document.createElement("div")
+            div.classList.add("notification")
+            div.textContent = message
+       
+            // Add to container
+            container.prepend(div)  // newest on top
+
+            div.addEventListener("mouseenter", () => {
+    div.style.backgroundColor = "grey"
+})
+
+div.addEventListener("mouseleave", () => {
+    div.style.backgroundColor = "#f0f9ff"
+})
+
+            // Clear input
+            input.value = ""
+            
+            // incremet count
+            count += 1
+             span.textContent = count
+        })
+        clear.addEventListener("click", () => {
+            if (count === 0) {
+                alert("the list is empty already")
+                return
+            }
+            container. innerHTML = ""
+            count = 0
+            span.textContent =count
+        })
+    </script>
+</body>
+</html>
