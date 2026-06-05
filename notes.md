@@ -103,3 +103,69 @@ Date: 26/05/2025
 
 ## What's Coming Tomorrow
 - Async/Await, Promises & Fetch API
+
+
+# Day 6 — DOM Manipulation & Events
+Date: 28/05/2025
+
+## What I Learned
+- The DOM is a tree of all HTML elements JavaScript can read and manipulate
+- querySelector is the modern way to select elements — works like CSS selectors
+- querySelectorAll returns all matches, querySelector returns just the first
+- textContent changes text, innerHTML changes HTML inside an element
+- classList.add, remove, toggle are cleaner than inline styles
+- createElement creates a new element, appendChild/prepend adds it to the page
+- container.innerHTML = "" is the fastest way to clear all children
+- addEventListener listens for user actions — click, input, submit, mouseenter
+- e.preventDefault() stops form from refreshing the page on submit
+- mouseenter fires when mouse enters an element, mouseleave when it leaves
+- Events added to dynamically created elements must be added right after creation
+
+## What Was Confusing
+- container.remove(div) is wrong — use container.innerHTML = "" to clear all
+- Hover in CSS works but JS mouseenter/mouseleave gives more control
+- Always reset both the counter variable AND the display span on clear
+
+## Code I Wrote
+- Notification app with add, counter and clear all features
+- Dynamic hover events on each notification card
+- Empty list check before clearing
+
+## What's Coming Tomorrow
+- Day 7 — Mini Project: Task List App
+- Combines everything from Week 1 into one real project
+
+# Day 7 — Mini Project: Task List App
+Date: 29/05/2025
+
+## What I Built
+A fully functional Task List App using pure JavaScript — no frameworks
+
+## Features
+- Add tasks with priority levels — high, medium, low
+- Mark tasks as complete with visual feedback
+- Delete tasks
+- Filter by all, active, completed
+- Live task counter
+- Press Enter to add tasks
+- Event delegation for dynamic elements
+
+## Week 1 Concepts Used
+- const & let — state management
+- Template literals — dynamic HTML generation
+- Arrays & spread — tasks = [task, ...tasks]
+- map — toggle complete without mutating state
+- filter — delete tasks and filter by status
+- Objects & shorthand — createTask function
+- Arrow functions — all functions
+- Closures — tasks array as private state
+- DOM manipulation — renderTasks function
+- Events — click, keypress, event delegation
+
+## Biggest Lessons From Week 1
+- JS is dynamically typed unlike Java — no int, double, float
+- Always use === never ==
+- Arrow functions with {} need explicit return
+- Spread creates new arrays/objects — never mutate directly
+- Async/Await is just cleaner promise syntax
+- DOM manipulation is why React was invented — it gets complex fast!
