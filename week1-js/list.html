@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List App</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: sans-serif; background: #f4f4f4; padding: 2rem; }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: #1e1e2e; margin-bottom: 1.5rem; }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input, select {
+            padding: 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        input { flex: 1; }
+
+        button {
+            padding: 0.6rem 1rem;
+            background: #1e1e2e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover { background: #2d2d3e; }
+
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            background: #eee;
+            color: #333;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .filter-btn.active { background: #1e1e2e; color: white; }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem;
+            border-left: 4px solid #2196F3;
+            background: #f9f9f9;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-item.completed {
+            border-color: #4CAF50;
+            opacity: 0.6;
+        }
+
+        .task-item.completed .task-title {
+            text-decoration: line-through;
+        }
+
+        .task-item.high   { border-color: #f44336; }
+        .task-item.medium { border-color: #FF9800; }
+        .task-item.low    { border-color: #4CAF50; }
+
+        .task-actions { display: flex; gap: 0.5rem; }
+
+        .complete-btn { background: #4CAF50; padding: 0.3rem 0.6rem; font-size: 0.8rem; }
+        .delete-btn   { background: #f44336; padding: 0.3rem 0.6rem; font-size: 0.8rem; }
+
+        .stats { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+        .image {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 20px grey;
+            position: relative;
+        }
+        .name {
+            color: #1e1e2e;
+            font-weight: bold;
+            align-content: center;
+            text-decoration: wavy;
+
+        }
+        .profile-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <! -- image design -->
+<div class="profile-box">
+                    <img src="/week1-js/img/profile.jpg" class="image" alt="Tony dev">
+                    <p class="name">Tony  Dev</p>
+</div>
+                <h1> Task App</h1>
+
+        <!-- Stats -->
+        <p class="stats" id="stats">0 tasks | 0 completed</p>
+
+        <!-- Input -->
+        <div class="input-group">
+            <input id="taskInput" type="text" placeholder="Enter a task..." />
+            <select id="prioritySelect">
+                <option value="low">🟢 Low</option>
+                <option value="medium" selected>🟡 Medium</option>
+                <option value="high">🔴 High</option>
+            </select>
+            <button id="addBtn">Add</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task List -->
+        <div id="taskContainer"></div>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+</html>
