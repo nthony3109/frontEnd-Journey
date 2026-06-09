@@ -169,3 +169,28 @@ A fully functional Task List App using pure JavaScript — no frameworks
 - Spread creates new arrays/objects — never mutate directly
 - Async/Await is just cleaner promise syntax
 - DOM manipulation is why React was invented — it gets complex fast!
+
+# Day 8 — JSX, Components & Props
+ Date: 30/05/2025
+
+## What I Learned
+- JSX is HTML written inside JavaScript — React converts it under the hood
+- Component names must start with a capital letter
+- JSX rules — one parent element, className not class, all tags must close
+- {} in JSX renders JavaScript expressions
+- Props are how you pass data into components — like function arguments
+- Always destructure props — const TnxCard = ({ type, amount }) => {}
+- Render lists with map — always include key prop
+- () in map returns automatically, {} needs explicit return keyword
+- Dynamic Tailwind classes using ternary — border-green-500 vs border-red-500
+
+## What Was Confusing
+- map with {} curly braces needs explicit return — same rule as Day 4!
+- key prop is required on every list item — React uses it to track changes
+
+## Code I Wrote
+- TnxCard component with dynamic border color based on transaction type
+- App.jsx rendering a list of TnxCards using map
+
+## What's Coming Tomorrow
+- useState & Event Handling — making components interactive
