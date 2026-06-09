@@ -8,12 +8,12 @@ import TnxCard from './TnxCard'
 function App() {
   const [count, setCount] = useState(0)
 
-  const tnxList = [
-    { id: 1, type: "credit", amount: 50000,  description: "Salary",        date: "01/06/2025" },
-    { id: 2, type: "debit",  amount: 20000,  description: "Rent",          date: "02/06/2025" },
-    { id: 3, type: "credit", amount: 15000,  description: "Freelance",     date: "03/06/2025" },
-    { id: 4, type: "debit",  amount: 5000,   description: "Groceries",     date: "04/06/2025" },
- ]
+//   const tnxList = [
+//     { id: 1, type: "credit", amount: 50000,  description: "Salary",        date: "01/06/2025" },
+//     { id: 2, type: "debit",  amount: 20000,  description: "Rent",          date: "02/06/2025" },
+//     { id: 3, type: "credit", amount: 15000,  description: "Freelance",     date: "03/06/2025" },
+//     { id: 4, type: "debit",  amount: 5000,   description: "Groceries",     date: "04/06/2025" },
+//  ]
 
  const [tnx, setTnx] = useState([])
  const [loading, setLoading] = useState(true)
