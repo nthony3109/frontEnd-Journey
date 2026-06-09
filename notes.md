@@ -194,3 +194,31 @@ A fully functional Task List App using pure JavaScript — no frameworks
 
 ## What's Coming Tomorrow
 - useState & Event Handling — making components interactive
+
+# Day 9 — useState & Event Handling
+Date: 31/05/2025
+
+## What I Learned
+- Regular variables don't trigger re-renders — useState does
+- useState returns [currentValue, setterFunction]
+- Never mutate state directly — always use the setter function
+- State updates with arrays use spread — setTasks([...tasks, newTask])
+- State updates with objects use spread — setUser({ ...user, name: "Tony" })
+- Previous state pattern — setCount((prev) => prev + 1)
+- Controlled inputs — value tied to state, onChange updates state
+- handleChange with computed property [name]: value handles all inputs in one function
+- Pass functions as props — onDelete={() => handleDelete(t.id)}
+- onClick={handleClick} not onClick={handleClick()} — no () on handler
+
+## What Was Confusing
+- Never call the handler directly onClick={handleClick()} — runs on render not click
+- State updates are async — use prev pattern when new state depends on old
+
+## Code I Wrote
+- Interactive transaction app with add and delete
+- Single handleChange function handling all form inputs
+- Live balance calculation using reduce
+- Delete handler passed as prop to TnxCard
+
+## What's Coming Tomorrow
+- useEffect & API calls — fetching real data from backend
