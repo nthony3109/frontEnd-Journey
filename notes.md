@@ -222,3 +222,35 @@ Date: 31/05/2025
 
 ## What's Coming Tomorrow
 - useEffect & API calls — fetching real data from backend
+
+# Day 10 — useEffect & API Calls
+ Date: 06/06/2025
+
+## What I Learned
+- useEffect manages side effects — API calls, WebSocket, timers
+- Dependency array controls when effect runs:
+  - No array — every render
+  - Empty [] — once on mount only
+  - [value] — when value changes
+- Always define useEffect BEFORE conditional returns — React rule!
+- Always handle 3 states for every API call: loading, error, data
+- finally block always runs whether success or fail — use for setLoading(false)
+- catch(error) — use the caught variable not the state variable
+- Cleanup function — return a function from useEffect to run on unmount
+- My useWebSocket hook was already using useEffect cleanup correctly!
+
+## What Was Confusing
+- Hooks must come before any conditional returns — never after
+- setErr(err) uses state variable, setErr(error.message) uses caught error
+- State variable name must match what you use in JSX — tnx not tnxList
+- Typos in API field names return undefined silently — always check spelling
+
+## Code I Wrote
+- Fetched 8 todos from jsonplaceholder API
+- Mapped API response to TnxCard format
+- Loading spinner while fetching
+- Error message if fetch fails
+- finally block to always stop loading
+
+## What's Coming Tomorrow
+- Component Communication & Lifting State
