@@ -254,3 +254,32 @@ Date: 31/05/2025
 
 ## What's Coming Tomorrow
 - Component Communication & Lifting State
+
+# Day 12 — React Router
+ Date: 07/06/2025
+
+## What I Learned
+- React Router enables multi-page apps without full page reloads
+- BrowserRouter wraps the entire app in main.jsx
+- Routes + Route define which component renders for each path
+- Each "page" is just a regular component
+- Link and NavLink navigate without reload — never use <a href>
+- NavLink className accepts a function with isActive for active styling
+- useParams reads dynamic URL segments like /transactions/:id
+- useNavigate allows redirecting after actions like login
+- App.jsx becomes purely routing logic — pages live in pages/ folder
+
+## What Was Confusing
+- <a href> causes full page reload — Link/NavLink don't
+- NavLink className takes a function not a string
+- Page components are just regular components — nothing special
+
+## Code I Wrote
+- Set up BrowserRouter in main.jsx
+- Created Dashboard, Transactions, Profile pages
+- Built Navbar with NavLink for active styling
+- Moved transaction fetching logic into Transactions.jsx
+- App.jsx is now clean — just Routes definition
+
+## What's Coming Tomorrow
+- Forms & Controlled Components
