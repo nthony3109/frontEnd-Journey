@@ -283,3 +283,33 @@ Date: 31/05/2025
 
 ## What's Coming Tomorrow
 - Forms & Controlled Components
+
+# Day 13 — Forms & Controlled Components
+ Date: 08/06/2025
+
+## What I Learned
+- Controlled inputs — React state is the single source of truth
+- One handleChange/setValue function handles all fields via computed properties
+- Validation runs BEFORE submission inside a validate() function
+- Object.keys(errors).length === 0 checks if validation passed
+- Always call functions with () — !validate is wrong, !validate() is correct
+- Conditional Tailwind classes show red border when a field has an error
+- Checkbox uses checked not value
+- Radio buttons share the same name to group them
+- e.preventDefault() stops the form from reloading the page
+- Reset form state after successful submission
+
+## What Was Confusing
+- object.Keys vs Object.keys — JavaScript is case sensitive on built-ins
+- !validate checks the function reference, !validate() calls it
+- setError vs setErr — setter name must match exactly what useState returned
+- Double negative logic !form.amount && !form.amount > 0 was backwards — use || instead
+
+## Code I Wrote
+- AddTransaction form — description, amount, type, date
+- Full validation with error messages per field
+- Conditional red border styling on invalid fields
+- Form resets after successful submission
+
+## What's Coming Tomorrow
+- Day 14 — Week 2 Mini Project: Multi Page App with API
