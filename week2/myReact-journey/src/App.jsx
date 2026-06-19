@@ -6,6 +6,7 @@ import Transactions from "./pages/Transactions";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard"
 import { Route, Routes } from 'react-router-dom'
+import AddTnx from './pages/AddTnx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       <Route path='/' element = {<Dashboard />} />
       <Route path='/transactions' element = { <Transactions />} />
       <Route path='/profile' element ={<Profile/>} />
+      <Route path='/addTnx' element={<AddTnx />} />
     </Routes>
     </div>
   )
