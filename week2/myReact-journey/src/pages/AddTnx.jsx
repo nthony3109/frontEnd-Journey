@@ -10,6 +10,7 @@ const AddTnx = () => {
         
     })
 
+    // block to map input values to variables
     const setValue = (e) => {
         const {name, value} = e.target
         setForm({... form, [name] : value })
