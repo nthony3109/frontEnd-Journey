@@ -16,6 +16,7 @@ const AddTnx = () => {
         setForm({... form, [name] : value })
     }
     
+    //this is obj to hold input errors 
     const [err, setErr] = useState({})
     const validate = () => {
         const newErr = {}
