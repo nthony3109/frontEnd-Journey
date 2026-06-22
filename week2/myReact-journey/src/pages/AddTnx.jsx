@@ -33,6 +33,7 @@ const AddTnx = () => {
         return Object.keys(newErr).length == 0
     }
 
+    //block to sumbit the form values for other operations 
     const  handleSubmit = (e) => {
         e.preventDefault()
         if (!validate()) return
