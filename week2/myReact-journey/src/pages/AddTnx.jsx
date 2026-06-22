@@ -18,6 +18,8 @@ const AddTnx = () => {
     
     //this is obj to hold input errors 
     const [err, setErr] = useState({})
+
+    // this block is used to verify and validate user input data
     const validate = () => {
         const newErr = {}
         console.log("inside error check block");
