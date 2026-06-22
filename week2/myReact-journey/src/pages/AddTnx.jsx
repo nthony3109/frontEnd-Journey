@@ -68,6 +68,8 @@ const AddTnx = () => {
 
             <button type="submit" className="w-full bg-gray-900 text-white py-2 rounded mt-6">Transact</button>
         </form>
+
+        // working fine 
         </>
     )
 }
